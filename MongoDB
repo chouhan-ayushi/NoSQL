@@ -81,4 +81,9 @@ https://github.com/neelabalan/mongodb-sample-dataset
 cd Downloads
 mongoimport --db new_weather_db --collection_weather_data --file data.json;
 
+//how much document in collection - count()
+Weather> db.weather_data.find().count()
+10000
+
+
 
