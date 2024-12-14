@@ -75,6 +75,10 @@ University> db.student.insertOne({name:"anurag",subject:["web","java"]})
   insertedId: ObjectId('675d5214bf1ddf27330deb30')
 }
 
-//how to add sample data in MongoDB
+//how to add sample data in MongoDB (with Mongodb compass)
 https://github.com/neelabalan/mongodb-sample-dataset
+//how to add sample data in MongoDB (without Mongodb compass) in cmd
+cd Downloads
+mongoimport --db new_weather_db --collection_weather_data --file data.json;
+
 
