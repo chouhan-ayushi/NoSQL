@@ -75,3 +75,6 @@ University> db.student.insertOne({name:"anurag",subject:["web","java"]})
   insertedId: ObjectId('675d5214bf1ddf27330deb30')
 }
 
+//how to add sample data in MongoDB
+https://github.com/neelabalan/mongodb-sample-dataset
+
