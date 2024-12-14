@@ -3,6 +3,9 @@ https://drive.google.com/file/d/17rk6V5p9Km7ouJdu7OgVn_2yMJcbRI-A/view?usp=drive
 https://drive.google.com/file/d/19VFASWyeJpW6P-QtsyUKLiFDVpw8T8lx/view?usp=drive_link
 https://drive.google.com/file/d/1gi-6pEmgxhJYn8H8cqANowXFXw1in2bL/view?usp=drive_link
 
+//How to add one column
+University>  db.student.insertOne({roll_no:2344444, name:"ayush", standard:12, marks: 93})
+
 //How to add multiple columns together?
 test> show dbs
 University  40.00 KiB
