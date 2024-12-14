@@ -2,3 +2,65 @@ https://drive.google.com/file/d/1958zbYWKsF-QwLfAF1nvOQsLyAl9yrGy/view?usp=drive
 https://drive.google.com/file/d/17rk6V5p9Km7ouJdu7OgVn_2yMJcbRI-A/view?usp=drive_link
 https://drive.google.com/file/d/19VFASWyeJpW6P-QtsyUKLiFDVpw8T8lx/view?usp=drive_link
 https://drive.google.com/file/d/1gi-6pEmgxhJYn8H8cqANowXFXw1in2bL/view?usp=drive_link
+
+//How to add multiple columns together?
+test> show dbs
+University  40.00 KiB
+admin       40.00 KiB
+config      72.00 KiB
+local       72.00 KiB
+test> use University
+switched to db University
+University> show collections
+student
+University> db.student.find()
+[
+  {
+    _id: ObjectId('675d4028b9d3ec20770deb30'),
+    name: 'Ayushi',
+    standard: '12',
+    marks: 94,
+    age: 21,
+    rollno: 322222
+  }
+]
+University> db.student.insertMany([{name:"shivani", standard:12, marks: 93},{name:"Mahak", standard:11, age:23},{name:"shivam", standard:12, marks: 97, rollno: 23344444, phone_no:98543422888}])
+{
+  acknowledged: true,
+  insertedIds: {
+    '0': ObjectId('675d4ea5870de1ad670deb30'),
+    '1': ObjectId('675d4ea5870de1ad670deb31'),
+    '2': ObjectId('675d4ea5870de1ad670deb32')
+  }
+}
+University> db.student.find()
+[
+  {
+    _id: ObjectId('675d4028b9d3ec20770deb30'),
+    name: 'Ayushi',
+    standard: '12',
+    marks: 94,
+    age: 21,
+    rollno: 322222
+  },
+  {
+    _id: ObjectId('675d4ea5870de1ad670deb30'),
+    name: 'shivani',
+    standard: 12,
+    marks: 93
+  },
+  {
+    _id: ObjectId('675d4ea5870de1ad670deb31'),
+    name: 'Mahak',
+    standard: 11,
+    age: 23
+  },
+  {
+    _id: ObjectId('675d4ea5870de1ad670deb32'),
+    name: 'shivam',
+    standard: 12,
+    marks: 97,
+    rollno: 23344444,
+    phone_no: 98543422888
+  }
+]
