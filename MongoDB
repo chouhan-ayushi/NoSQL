@@ -67,3 +67,11 @@ University> db.student.find()
     phone_no: 98543422888
   }
 ]
+
+// How to add an array in the JSON in MongoDB
+University> db.student.insertOne({name:"anurag",subject:["web","java"]})
+{
+  acknowledged: true,
+  insertedId: ObjectId('675d5214bf1ddf27330deb30')
+}
+
