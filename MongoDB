@@ -85,5 +85,8 @@ mongoimport --db new_weather_db --collection_weather_data --file data.json;
 Weather> db.weather_data.find().count()
 10000
 
+// how to get certain number of documents?
+Weather> db.weather_data.find().limit(3)
+
 
 
