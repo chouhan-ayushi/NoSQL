@@ -114,6 +114,10 @@ Weather> db.weather_data.deleteMany({callLetters: 'FNPG'})
 { acknowledged: true, deletedCount: 8 }
 Weather> db.weather_data.find().count()
 9991
+/ db.weather_data.deleteOne({ _id:ObjectId('5553a998e4b02cf7151190ba')})
+{ acknowledged: true, deletedCount: 1 }
+Weather> db.weather_data.find({ _id:ObjectId('5553a998e4b02cf7151190ba')})
+
 
 
 
