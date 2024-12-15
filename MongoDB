@@ -119,6 +119,19 @@ Weather> db.weather_data.find().count()
 { acknowledged: true, deletedCount: 1 }
 Weather> db.weather_data.find({ _id:ObjectId('5553a998e4b02cf7151190ba')})
 
+// how to update a record
+ db.weather_data.updateOne({ _id: ObjectId('5553a998e4b02cf7151190b8')}, {$set:{ elevation: 9997}})
+{
+  acknowledged: true,
+  insertedId: null,
+  matchedCount: 1,
+  modifiedCount: 1,
+  upsertedCount: 0
+}
+Weather> db.weather_data.find().limit(2)
+
+
+
 
 
 
