@@ -96,8 +96,11 @@ db.weather_data.find().skip(5).limit(2)
 9994
 //projections
  db.weather_data.find({type: 'FM-13'},{position: true,skyCondition:true})
-you can also pass first argument as an empty object
+//you can also pass first argument as an empty object
  db.weather_data.find({},{position: true,skyCondition:true})
+//If we want to exclude some properties
+db.weather_data.find({},{position: false,skyCondition:false}).limit(3)
+
 
 
 
