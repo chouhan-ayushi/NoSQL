@@ -88,5 +88,8 @@ Weather> db.weather_data.find().count()
 // how to get certain number of documents?
 Weather> db.weather_data.find().limit(3)
 
+// how to set offset(to skip some records)
+db.weather_data.find().skip(5).limit(2)
+
 
 
