@@ -94,6 +94,12 @@ db.weather_data.find().skip(5).limit(2)
 //how to filter records based on a condition
  db.weather_data.find({type: 'FM-13'}).count()
 9994
+//projections
+ db.weather_data.find({type: 'FM-13'},{position: true,skyCondition:true})
+you can also pass first argument as an empty object
+ db.weather_data.find({},{position: true,skyCondition:true})
+
+
 
 
 
