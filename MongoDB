@@ -107,6 +107,7 @@ Weather> db.weather_data.find().count()
 9999
 Weather> db.weather_data.find({st: 'x+45200-066500'}).count()
 0
+(similarly we use findOneDelete)
 
 /Weather> db.weather_data.find({callLetters: 'FNPG'}).count()
 8
