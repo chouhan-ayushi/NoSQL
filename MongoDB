@@ -91,5 +91,9 @@ Weather> db.weather_data.find().limit(3)
 // how to set offset(to skip some records)
 db.weather_data.find().skip(5).limit(2)
 
+//how to filter records based on a condition
+ db.weather_data.find({type: 'FM-13'}).count()
+9994
+
 
 
