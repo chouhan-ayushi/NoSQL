@@ -101,12 +101,19 @@ db.weather_data.find().skip(5).limit(2)
 //If we want to exclude some properties
 db.weather_data.find({},{position: false,skyCondition:false}).limit(3)
 //how to delete a document
- db.weather_data.deleteOne( { st: 'x+45200-066500'})
+ /db.weather_data.deleteOne( { st: 'x+45200-066500'})
 { acknowledged: true, deletedCount: 1 }
 Weather> db.weather_data.find().count()
 9999
 Weather> db.weather_data.find({st: 'x+45200-066500'}).count()
 0
+
+/Weather> db.weather_data.find({callLetters: 'FNPG'}).count()
+8
+Weather> db.weather_data.deleteMany({callLetters: 'FNPG'})
+{ acknowledged: true, deletedCount: 8 }
+Weather> db.weather_data.find().count()
+9991
 
 
 
