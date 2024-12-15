@@ -105,6 +105,8 @@ db.weather_data.find({},{position: false,skyCondition:false}).limit(3)
 { acknowledged: true, deletedCount: 1 }
 Weather> db.weather_data.find().count()
 9999
+Weather> db.weather_data.find({st: 'x+45200-066500'}).count()
+0
 
 
 
