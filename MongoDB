@@ -130,6 +130,16 @@ Weather> db.weather_data.find({ _id:ObjectId('5553a998e4b02cf7151190ba')})
 }
 Weather> db.weather_data.find().limit(2)
 
+ db.weather_data.updateOne({ _id: ObjectId('5553a998e4b02cf7151190bb')}, {$inc:{ elevation: 1}})
+{
+  acknowledged: true,
+  insertedId: null,
+  matchedCount: 1,
+  modifiedCount: 1,
+  upsertedCount: 0
+}
+Weather>  db.weather_data.find().limit(2)
+
 
 
 
