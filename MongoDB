@@ -168,6 +168,18 @@ $not ->logical not
 $nor ->logical nor
 $in ->for checking an array
 $nin ->not in array
+Weather> db.weather_data.find({type:{$ne:'FM-13'}}).count()
+6
+
+Weather>  db.weather_data.find({"dewPoint.value":{$lt:999}}).count()
+4876
+
+Weather>  db.weather_data.find({"dewPoint.value":{$gt:999}}).count()
+5114
+
+Weather> db.weather_data.find({$and:[{"dewPoint.value":{$lt:999}},{"dewPoint.value":{$gt:999}}]}).count()
+0
+
 
 
 
