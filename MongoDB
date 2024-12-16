@@ -150,6 +150,12 @@ db.weather_data.updateOne({ _id: ObjectId('5553a998e4b02cf7151190b8')}, {$inc:{e
 }
 Weather>  db.weather_data.find().limit(2)
 
+//how to get distinct values of a perticular key?
+Weather> db.weather_data.distinct("type")
+[ 'FM-13', 'SAO' ]
+Weather> db.weather_data.distinct("callLetters")
+
+
 
 
 
