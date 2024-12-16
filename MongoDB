@@ -185,6 +185,9 @@ Weather> db.weather_data.find({callLetters:{$in:['3EHH','3EIZ','3EJF']}}).co
 unt()
 17
 
+//Analysing Queries
+ db.weather_data.find({type:'SAQ'}).explain("executionStats")
+
 
 
 
