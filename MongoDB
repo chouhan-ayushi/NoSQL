@@ -180,6 +180,11 @@ Weather>  db.weather_data.find({"dewPoint.value":{$gt:999}}).count()
 Weather> db.weather_data.find({$and:[{"dewPoint.value":{$lt:999}},{"dewPoint.value":{$gt:999}}]}).count()
 0
 
+0
+Weather> db.weather_data.find({callLetters:{$in:['3EHH','3EIZ','3EJF']}}).co
+unt()
+17
+
 
 
 
