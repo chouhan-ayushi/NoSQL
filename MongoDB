@@ -162,6 +162,12 @@ $lt ->less than
 $lte ->less than equal
 $gt ->greater than
 $gte ->greater than equal
+$and ->logical and
+$or ->logical or
+$not ->logical not
+$nor ->logical nor
+$in ->for checking an array
+$nin ->not in array
 
 
 
