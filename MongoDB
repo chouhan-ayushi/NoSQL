@@ -187,7 +187,7 @@ unt()
 
 //Analysing Queries
  db.weather_data.find({type:'SAQ'}).explain("executionStats")
-//create indexing
+
 
 
 
