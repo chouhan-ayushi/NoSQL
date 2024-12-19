@@ -190,7 +190,7 @@ unt()
  db.weather_data.find({type:'SAQ'}).explain("executionStats")
 
 // to create an index
-db.weather_data.createIndex({elevation: 1})
+db.weather_data.createIndex({elevation: 1})//(if decending order then -1)
 elevation_1
 db.weather_data.getIndexes()
 [
