@@ -192,7 +192,7 @@ unt()
 // to create an index
 db.weather_data.createIndex({elevation: 1})//(if decending order then -1)
 elevation_1
-db.weather_data.getIndexes()
+db.weather_data.getIndexes() (see all indexes)
 [
   { v: 2, key: { _id: 1 }, name: '_id_' },
   { v: 2, key: { elevation: 1 }, name: 'elevation_1' }
