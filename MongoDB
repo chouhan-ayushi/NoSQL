@@ -101,6 +101,7 @@ db.weather_data.find().skip(5).limit(2)
  db.weather_data.find({},{position: true,skyCondition:true})
 //If we want to exclude some properties
 db.weather_data.find({},{position: false,skyCondition:false}).limit(3)
+
 //how to delete a document
  /db.weather_data.deleteOne( { st: 'x+45200-066500'})
 { acknowledged: true, deletedCount: 1 }
