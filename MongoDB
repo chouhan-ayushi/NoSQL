@@ -106,7 +106,7 @@ db.weather_data.find().skip(5).limit(2)
 db.weather_data.find({},{position: false,skyCondition:false}).limit(3)
 
 //how to delete a document
- /db.weather_data.deleteOne( { st: 'x+45200-066500'})
+ db.weather_data.deleteOne( { st: 'x+45200-066500'})
 { acknowledged: true, deletedCount: 1 }
 Weather> db.weather_data.find().count()
 9999
